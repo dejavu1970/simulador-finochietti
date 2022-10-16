@@ -22,16 +22,17 @@ function inicio(){
         let totalPago = (prestamo + interes);
         let cuotas = parseFloat((totalPago / meses).toFixed(2));
         printCuotas(meses, cuotas);
-        alert(`el total a pagar al final de los ${meses} meses va a ser de $ ${totalPago}
-        con $ ${prestamo}de capital solicitado y un interes de $ ${interes}`)
-    }
+        alert(`El prestamo solicitado es de $  ${prestamo.toLocaleString('en-US', {style: 'currency',currency: 'USD', minimumFractionDigits: 2})}.-
+El mismo se va a devolver en ${meses} meses. 
+El interes total va a ser de $ ${interes.toLocaleString('en-US', {style: 'currency',currency: 'USD', minimumFractionDigits: 2})}.-
+El total a abonar por todo concepto es de $ ${totalPago.toLocaleString('en-US', {style: 'currency',currency: 'USD', minimumFractionDigits: 2})}.-`)}
 }
 
 function printCuotas(meses, cuotas){
     let cuota=0;
     while(cuota < meses){
         cuota++
-        console.log(`El valor de su cuota N° ${cuota} va a ser de: $ ${cuotas}`);
+        console.log(`El valor de su cuota N° ${cuota} va a ser de: $ ${cuotas.toLocaleString('en-US', {style: 'currency',currency: 'USD', minimumFractionDigits: 2})}}`);
     }
 }
 
