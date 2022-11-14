@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    color: black;
+    background: linear-gradient(to right, rgb(117,170,219), rgb(255,255,255), rgb(117,170,219));
+}
+
+.btn{
+    background-color:#008CBA;
+    color: azure;
+}
+
+.estilosCard{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/*Card*/
+.card{
+    margin: 1rem auto;
+    border: 1px solid black;
+    border-radius: 10%;
+    text-align: center;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.9);
+    background-color: white;
+    max-height: 700px;
+}
+
+.card img{
+    margin: auto;
+    box-shadow: 5px 5px 20px;
+    width: 200px;
+    height: 200px;
+}
+
+.precio{
+    font-size: 25px;
+    font-weight: 600;
+    border: 1px black;
+} 
+.titulocard{
+    border-top: 10px;
+    font-size: 1.5rem;
+}
+
+
+
+
+.card-carrito{
+    display: flex;
+    background-color: bisque;
+    border-bottom: 2px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img-top{
+    width: 80px;
+    height: 80px;
+    margin: 10px 100px 10px 50px;
+    float: left;
+    
+}
+
+.card-title{
+    
+    margin: 10px;
+    
+}
+
+.card-text{
+    font-weight: bold;
+    float: left;
+    margin-top: 15px;
+}
+
+.btn-modal{
+
+    margin-top: 8px;
+    margin-left: 50px;
+    width: 40px;
+    height: 40px;
+}
+
+
+
+
