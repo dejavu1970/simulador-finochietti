@@ -1,0 +1,198 @@
+[
+    {
+        "id": 1,
+        "equipo": "Velez Sarsfield",
+        "precio": 15000,
+        "cantidad": 6,
+        "imagen": "./velez.png"
+    },
+    {
+        "id": 2,
+        "equipo": "River Plate",
+        "precio": 12000,
+        "cantidad": 6,
+        "imagen": "./img/river.png"
+    },
+    {
+        "id": 3,
+        "equipo": "Boca Juniors",
+        "precio": 12000,
+        "cantidad": 6,
+        "imagen": "./bocajrs.png"
+    },
+    {
+        "id": 4,
+        "equipo": "Independiente",
+        "precio": 12000,
+        "cantidad": 6,
+        "imagen": "./img/independiente.png"
+    },
+    {
+        "id": 5,
+        "equipo": "San Lorenzo",
+        "precio": 12000,
+        "cantidad": 6,
+        "imagen": "./img/sanlorenzo.png"
+    },
+    {
+        "id": 6,
+        "equipo": "Racing Club",
+        "precio": 12000,
+        "cantidad": 6,
+        "imagen": "./img/racing.png"
+    },
+    {
+        "id": 7,
+        "equipo": "Argentinos Junior",
+        "precio": 10500,
+        "cantidad": 6,
+        "imagen": "./img/argentinosjrs.png"
+    },
+    {
+        "id": 8,
+        "equipo": "Platense",
+        "precio": 10500,
+        "cantidad": 6,
+        "imagen": "./img/platense.png"
+    },
+    {
+        "id": 9,
+        "equipo": "Defensa y Justicia",
+        "precio": 10500,
+        "cantidad": 6,
+        "imagen": "./img/defensa-y-justicia.png"
+    },
+    {
+        "id": 10,
+        "equipo": "Banfield",
+        "precio": 10500,
+        "cantidad": 6,
+        "imagen": "./img/banfield-1.png"
+    },
+    {
+        "id": 11,
+        "equipo": "Estudiantes LP",
+        "precio": 10500,
+        "cantidad": 6,
+        "imagen": "./img/estudiantes.png"
+    },
+    {
+        "id": 12,
+        "equipo": "Central Cordoba",
+        "precio": 10500,
+        "cantidad": 6,
+        "imagen": "./img/central-cordoba-.png"
+    },
+    {
+        "id": 13,
+        "equipo": "Colon de Sta Fe",
+        "precio": 10500,
+        "cantidad": 6,
+        "imagen": "./img/colon.png"
+    },
+    {
+        "id": 14,
+        "equipo": "Lanus",
+        "precio": 10500,
+        "cantidad": 6,
+        "imagen": "./img/lanus.png"
+    },
+    {
+        "id": 15,
+        "equipo": "Barracas Central",
+        "precio": 10500,
+        "cantidad": 6,
+        "imagen": "./img/barracas central.png"
+    },
+    {
+        "id": 16,
+        "equipo": "Talleres de Cba",
+        "precio": 10500,
+        "cantidad": 6,
+        "imagen": "./img/talleres.png"
+    },
+    {
+        "id": 17,
+        "equipo": "Union de Sta Fe",
+        "precio": 10500,
+        "cantidad": 6,
+        "imagen": "./img/union.png"
+    },
+    {
+        "id": 18,
+        "equipo": "Tigre",
+        "precio": 10500,
+        "cantidad": 6,
+        "imagen": "./img/tigre.png"
+    },
+    {
+        "id": 19,
+        "equipo": "Patronato",
+        "precio": 10500,
+        "cantidad": 6,
+        "imagen": "./img/patronato.png"
+    },
+    {
+        "id": 20,
+        "equipo": "Sarmiendo de Junin",
+        "precio": 10500,
+        "cantidad": 6,
+        "imagen": "./img/sarmiento.png"
+    },
+    {
+        "id": 21,
+        "equipo": "Rosario Central",
+        "precio": 10500,
+        "cantidad": 6,
+        "imagen": "./img/rosario-centra.png"
+    },
+    {
+        "id": 22,
+        "equipo": "Newells old boys",
+        "precio": 10500,
+        "cantidad": 6,
+        "imagen": "./img/newells.png"
+    },
+    {
+        "id": 23,
+        "equipo": "Huracan",
+        "precio": 10500,
+        "cantidad": 6,
+        "imagen": "./img/huracan.png"
+    },
+    {
+        "id": 24,
+        "equipo": "Godoy Cruz de Mza",
+        "precio": 10500,
+        "cantidad": 6,
+        "imagen": "./img/godoy-cruz.png"
+    },
+    {
+        "id": 25,
+        "equipo": "Gimnasia de LP",
+        "precio": 10500,
+        "cantidad": 6,
+        "imagen": "./img/gimnasia.png"
+    },
+    {
+        "id": 26,
+        "equipo": "Atletico Tucuman",
+        "precio": 10500,
+        "cantidad": 6,
+        "imagen": "./img/atletico-tucuman.png"
+    },
+    {
+        "id": 27,
+        "equipo": "Aldosivi",
+        "precio": 10500,
+        "cantidad": 6,
+        "imagen": "./img/aldosivi.png"
+    },
+    {
+        "id": 28,
+        "equipo": "Arsenal de Sarandi",
+        "precio": 10500,
+        "cantidad": 6,
+        "imagen": "./img/arsenal.png"
+    }
+]

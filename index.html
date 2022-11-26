@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
-    <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
 <link rel="stylesheet" href="estilos.css">
 
@@ -16,72 +16,135 @@
 </head>
 
 <body>
+<header>
+<!--navegador y modal con boostrap-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Camisetas del Futbol Argentino</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
+    </button>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Camisetas del Futbol Argentino</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon "></span>
-      </button>
-  
-      <div class="collapse navbar-collapse" id="navbarColor01">
-        <ul class="navbar-nav me-auto">
-          
-          <form class="d-flex">
-            <input id="buscador"class="form-control me-4" placeholder="Encuentre su camiseta" aria-label="Search">
-          </form> 
-          
-        </ul>
-        <ul className="navbar-nav me-auto">  
-          <li className="nav-item " >
-              <a id="botonCarrito" data-bs-toggle="modal" data-bs-target="#idModal" class="btn btn-secondary"><i class="fas fa-shopping-cart fa-1x"></i></a>
-          </li>
-      </ul>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <span class="navbar-nav me-auto">
+        
+        <form class="d-flex">
+          <input id="buscador"class="form-control me-4" placeholder="Encuentre su camiseta" aria-label="Search">
+        </form> 
+
+        <span>
+          <ul>
+            <select id="selectOrden" class="form-select form-select-sm " aria-label=".form-select-sm example">
+              <option selected>Ordenar por:</option>
+              <option value="1">Mayor a menor</option>
+              <option value="2">Menor a mayor</option>
+              <option value="3">Alfabeticamente</option>
+            </select>
+          </ul>
+        </span>
+        
+      </span>
+      <ul className="navbar-nav me-auto">  
+        <li className="nav-item " >
+            <a id="botonCarrito" data-bs-toggle="modal" data-bs-target="#idModal" class="btn btn-secondary"><i class="fas fa-shopping-cart fa-1x"></i></a>
+        </li>
+    </ul>
+    </div>
+  </div> 
+</nav>
+
+<div class="modal fade" data-bs-backdrop="static"  id="idModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Carrito de Compras</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-    </div> 
-  </nav>
-
-  <h1 class="title text-center mt-5 mb-5 text-capitalize">Camisetas del Futbol Argentino</h1>
-  
-  
-
-  <div class="modal fade" data-bs-backdrop="static"  id="idModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Carrito de Compras</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body" id="modal-body">
-          
-        </div>
-        <div class="row ml-ato">
-          <p id="precioTotal"></p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" data-bs-dismiss="modal" class="btn btn-success" id="botonFinalizarCompra">Finalizar Compra</button>
-        </div>
+      <div class="modal-body" id="modal-body">
+        
+      </div>
+      <div class="row ml-ato">
+        <p id="precioTotal"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" data-bs-dismiss="modal" class="btn btn-success" id="botonFinalizarCompra">Finalizar Compra</button>
       </div>
     </div>
   </div>
+</div>
 
-  <div class="container">
+</header>
+
+
+<main>
+  <h1 class="tittle">Camisetas del Futbol Argentino</h1>
+
+  <div class="grid-layout">
     <div id="coincidencia"></div>
-    <div id="casacas" class="estilosCard"></div>
+      <div id="casacas" class="estiloCard"></div>
   </div>
 
+
+</main>
+
   
-  
+<!--sweet alert-->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"                 integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
-    </script>
-
-    
-    <script src="classconstructora.js"></script>
-    <script src="terceraEntrega.js"></script>
+<script src="classconstructora.js"></script>
+<script src="proyectoFinal.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
