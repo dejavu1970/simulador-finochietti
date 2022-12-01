@@ -9,16 +9,22 @@ body{
     height: 100vh;
 }
 
-.tittle{
+.ordenador{
+    margin-top: 15px;
+}
+
+/*cards principales*/
+
+.titulo-ppal{
     text-align: center;
     margin: 20px;
-    padding: 20px;
+    padding: 80px;
 }
 
 .grid-layout{
     width: 80%;
     margin: auto;
-    height: 150vh;
+    height: 250vh;
 }
 
 .grid-layout .estiloCard{
@@ -37,17 +43,24 @@ body{
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.9);
     background-color: white;
     width: 300px;
+    height: 350px;
 }
 
-.card:hover{
-    box-shadow: 0 12px 36px 0 rgba(82, 150, 214, 0.901);
+.card-title{
+    margin: 15px;
+    font-size: 25px;
+    font-weight: bolder;
+    text-transform: capitalize;
 }
 
 .card img{
-    margin: auto;
+    margin: 5px auto 5px auto;
+    padding: 5px;
     width: 200px;
     height: 200px;
-    transition: all .5s;
+    transition: all .7s;
+    
+    background-color: rgb(230,230,230);
 }
 
 .card img:hover{
@@ -58,49 +71,35 @@ body{
     
     padding: 5px;
     height: auto;
+    align-content: flex-end;
 }
 
-.precio{
+.ofertaColor{
     font-size: 25px;
-    font-weight: 600;
+    font-weight: bold;
 
 } 
-.titulocard{
-    border-top: 10px;
-    font-size: 1.8rem;
-    border-bottom: 1px solid rgba(0,0,0,0.4);
+
+.card .btn-compra{
+    width: 60%;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: aliceblue;
+    font-style: bold;
+    background-color:rgba(0, 100, 248, 0.7);
+    border-radius: 10px;
+
 }
 
-
-
-
-.card-carrito{
-    display: flex;
-    background-color: bisque;
-    border-bottom: 2px solid black;
-    justify-content: center;
-    align-items: center;
-}
-
-.card-img-top{
-    width: 80px;
-    height: 80px;
-    margin: 10px 100px 10px 50px;
-    float: left;
+.card .btn-compra:hover{
+    background-color:rgba(60, 179, 113, 0.8);
+    color: black;
     
+
 }
 
-.card-title{
-    
-    margin: 10px;
-    
-}
-
-.card-text{
-    font-weight: bold;
-    float: left;
-    margin-top: 15px;
-}
+/*carrito de compras*/
 
 .btn-modal{
 
@@ -110,8 +109,78 @@ body{
     height: 40px;
 }
 
-.btn{
-    margin-bottom: 30px;
+.card-modal{
+    display: flex;
+    background-color: rgb(142, 141, 141, .2);
+    border-bottom: 2px solid black;
+    align-items: center;
+    width: 420px;
+    height: 160px;
+
+}
+
+.space-img{
+    width: 180px;
+    height: 180px;
+}
+
+.card-img-top{
+    width: 100px;
+    height: 100px;
+    margin: 15%;
+    float: left;
+    
+}
+
+.card-body-modal{
+    width: 240px;
+    height: 180px;
+
+}
+
+.card-title{
+    font-size: 20px;
+    text-align: center;
+    
+}
+
+.card-text{
+    margin-right: 15px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
+    color: crimson;
+    background-color: rgb(192, 192, 195);
+}
+
+.cancelar{
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    margin-left: 40px;
+    
+
+}
+
+
+.btn-carro{
+    margin-left: 20px;
+    padding: 10px;
     background-color: rgb(15,15,15,.6);
     color: rgb(255,255,255);
+}
+
+.acumulador{
+    padding: 10px;
+    text-align: center;
+    background-color: antiquewhite;
+
+}
+
+.carrito-vacio{
+    padding: 10px;
+    text-align: center;
+    background-color: antiquewhite;
+
 }

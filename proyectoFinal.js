@@ -5,7 +5,7 @@ let divProductos = document.getElementById("casacas")
 let buscador = document.getElementById("buscador")
 //let btnVerCatalogo = document.getElementById("verCatalogo")
 //let btnOcultarCatalogo = document.getElementById("ocultarCatalogo")
-let modalBodyCarrito = document.getElementById("modal-bodyCarrito")
+let modalBodyCarrito = document.getElementById("modal-body")
 let botonCarrito = document.getElementById("botonCarrito")
 let coincidencia = document.getElementById("coincidencia")
 let selectOrden = document.getElementById("selectOrden")
@@ -20,14 +20,15 @@ function mostrarCatalogo(array){
         let jerseyNuevo = document.createElement("div")
         jerseyNuevo.classList.add("col-12", "col-md-6", "col-lg-4", "my-1")
         
-        jerseyNuevo.innerHTML = `<div id="${jersey.id}" class="card" style="width: 18rem;">
-                                    <img class="card-img-top img-fluid" style="height: 200px;"src="./img/${jersey.imagen}" alt="${jersey.equipo}">
+        jerseyNuevo.innerHTML = `<div id="${jersey.id}" class="card" style="">
+                                    <h4 class="card-title">${jersey.equipo}</h4>
+                                    <img class="card-img-top img-fluid" style="height: 150px;"src="${jersey.imagen}" alt="${jersey.equipo}">
                                     <div class="card-body">
-                                        <h4 class="card-title">${jersey.equipo}</h4>
-                                        <p class="${jersey.precio <= 2000 ? "ofertaColor" : "precioComun"}">Precio: ${jersey.precio}</p>
-                                    <button id="agregarBtn${jersey.id}" class="btn btn-outline-success">Agregar al carrito</button>
+                                        
+                                        <p class="${jersey.precio <= 20000 ? "ofertaColor" : "precioComun"}">$ ${jersey.precio}</p>
+                                        <button id="agregarBtn${jersey.id}" class="btn-compra">Agregar al carrito</button>
                                     </div>
-    </div>`
+                                </div>`
         divProductos.appendChild(jerseyNuevo)
         let btnAgregar = document.getElementById(`agregarBtn${jersey.id}`)
         
@@ -47,13 +48,13 @@ function agregarAlCarrito(jersey){
     //sweetAlert para agregar al carrito
     Swal.fire({
         // position: "top-end",
-        title: "Agregaste una camiseta al carrito",
+        title: `La camiseta de ${jersey.equipo} 
+        fue agregada al carrito`,
         icon: "success",
         confirmButtonText: "Entendido",
         confirmButtonColor: "green",
-        timer: 3000,
-        text: `La camiseta de  ${jersey.equipo} ha sido agregado`,
-        imageUrl: `./img/${jersey.imagen}`,
+        timer: 2500,
+        imageUrl: `${jersey.imagen}`,
         imageHeight: 200,
         imageAlt: `${jersey.equipo}`
     })
@@ -64,13 +65,20 @@ function cargarProductosCarrito(array){
     modalBodyCarrito.innerHTML = ""
     array.forEach((productoCarrito)=>{
         modalBodyCarrito.innerHTML += `
-        <div class="card border-primary mb-3" id ="productoCarrito${productoCarrito.id}" style="max-width: 540px;">
-            <img class="card-img-top" height="300px" src="assets/${productoCarrito.imagen}" alt="${productoCarrito.equipo}">
-            <div class="card-body">
+        <div class="card-modal border-primary mb-3" id     ="productoCarrito${productoCarrito.id}" style="">
+
+            <div class="space-img">
+                <img class="card-img-top" src="${productoCarrito.imagen}" alt="${productoCarrito.equipo}">
+            </div>
+
+            <div class="card-body-modal">
                     <h4 class="card-title">${productoCarrito.equipo}</h4>
-                
+
                     <p class="card-text">$${productoCarrito.precio}</p> 
-                    <button class= "btn btn-danger" id="botonEliminar${productoCarrito.id}"><i class="fas fa-trash-alt"></i></button>
+
+                    <p class="cancelar">Cancelar</p>
+
+                    <button class= "btn-carro btn-danger" id="botonEliminar${productoCarrito.id}"><i class="fas fa-trash-alt"></i></button>
             </div>    
         </div>
 `
@@ -78,7 +86,7 @@ function cargarProductosCarrito(array){
     array.forEach((productoCarrito, indice)=>{
         //capturo elemento del DOM sin guardarlo en variable
         document.getElementById(`botonEliminar${productoCarrito.id}`).addEventListener("click",()=>{
-        
+            console.log(`Boton eliminar ${productoCarrito.id}`)
         //Eliminar del DOM
         let cardProducto = document.getElementById(`productoCarrito${productoCarrito.id}`)
         cardProducto.remove()
@@ -99,7 +107,8 @@ function compraTotal(array){
     let acumulador = 0
     acumulador = array.reduce((acc, productoCarrito)=>acc + productoCarrito.precio,0)
     console.log(acumulador)
-    acumulador == 0 ? divCompra.innerHTML = `No hay productos en el carrito`: divCompra.innerHTML = `EL total de su carrito es ${acumulador}`
+    acumulador == 0 ? divCompra.innerHTML = ` <h4 class="carrito-vacio"> No hay productos en el carrito</h4>`: divCompra.innerHTML = `<h4 class="acumulador" > EL total de su carrito es de $ ${acumulador}</h4>`
+
 }
 
 //function buscador que se activa con evento change del input para buscar

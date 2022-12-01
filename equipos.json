@@ -4,7 +4,7 @@
         "equipo": "Velez Sarsfield",
         "precio": 15000,
         "cantidad": 6,
-        "imagen": "./velez.png"
+        "imagen": "./img/velez.png"
     },
     {
         "id": 2,
@@ -18,7 +18,7 @@
         "equipo": "Boca Juniors",
         "precio": 12000,
         "cantidad": 6,
-        "imagen": "./bocajrs.png"
+        "imagen": "./img/bocajrs.png"
     },
     {
         "id": 4,

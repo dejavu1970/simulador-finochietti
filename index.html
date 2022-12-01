@@ -31,24 +31,24 @@
         <form class="d-flex">
           <input id="buscador"class="form-control me-4" placeholder="Encuentre su camiseta" aria-label="Search">
         </form> 
-
-        <span>
-          <ul>
-            <select id="selectOrden" class="form-select form-select-sm " aria-label=".form-select-sm example">
-              <option selected>Ordenar por:</option>
-              <option value="1">Mayor a menor</option>
-              <option value="2">Menor a mayor</option>
-              <option value="3">Alfabeticamente</option>
-            </select>
-          </ul>
-        </span>
-        
       </span>
-      <ul className="navbar-nav me-auto">  
-        <li className="nav-item " >
+      
+      <span class="ordenador">
+        <ul>
+          <select id="selectOrden" class="form-select form-select-sm " aria-label=".form-select-sm example">
+            <option selected>Ordenar por:</option>
+            <option value="1">Mayor a menor</option>
+            <option value="2">Menor a mayor</option>
+            <option value="3">Alfabeticamente</option>
+          </select>
+        </ul>
+      </span> 
+
+        <ul className="navbar-nav me-auto">  
+          <li className="nav-item " >
             <a id="botonCarrito" data-bs-toggle="modal" data-bs-target="#idModal" class="btn btn-secondary"><i class="fas fa-shopping-cart fa-1x"></i></a>
-        </li>
-    </ul>
+          </li>
+        </ul>
     </div>
   </div> 
 </nav>
@@ -78,7 +78,10 @@
 
 
 <main>
-  <h1 class="tittle">Camisetas del Futbol Argentino</h1>
+  
+  
+
+  <h1 class="titulo-ppal">Camisetas del Futbol Argentino</h1>
 
   <div class="grid-layout">
     <div id="coincidencia"></div>
